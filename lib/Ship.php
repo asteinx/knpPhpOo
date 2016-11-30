@@ -12,7 +12,7 @@ class Ship {
 	 *
 	 * @param boolean $useShortFormat        	
 	 */
-	public function getNameAndSpecs($useShortFormat = FALSE) {
+	public function getNameAndSpecs( $useShortFormat = FALSE) {
 		if ($useShortFormat) {
 			return sprintf ( '%s: %s/%s/%s', $this->name, $this->weaponPower, $this->jediFactor, $this->strength );
 		} else {
@@ -24,6 +24,7 @@ class Ship {
 	 * @param Ship $givenShip        	
 	 */
 	public function doesGivenShipHaveMoreStrength($givenShip) {
+		
 		return $givenShip->strength > $this->strength;
 	}
 	public function getName() {
